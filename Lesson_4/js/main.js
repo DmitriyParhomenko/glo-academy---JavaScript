@@ -4,102 +4,82 @@ let money,
 				time,
 				price
 
-function start() {
-	money = +prompt("Ваш бюджет?", '');
-
-	while (isNaN(money) || money == "" || money == null ) {
-		money = +prompt("Ваш бюджет?", '');
-	}
-
-	name = prompt("Название вашего магазина", '').toUpperCase();
-	time = 21;
-}
-
-start();
-
-// обявляем объект mainList
+// Объявляем объект mainList
 mainList = {
 	yourBudget: money,
 	nameStore: name,
 	shopGoods: [],
-	employers: {
-
-	},
+	employers: {},
 	open: false,
-	discount: false
-}
+	discount: false,
+	shopItems: [],
+	start: function start() {
+		money = +prompt("Ваш бюджет?", '');
 
-// Присваиваем массиву значния введённые пользователем
-function chooseGoods() {
-	for (let i = 0; i < 5; i++ ) {
+		while (isNaN(money) || money == "" || money == null ) {
+			money = +prompt("Ваш бюджет?", '');
+		}
 
-		let a = prompt("Какой тип товаров будем продавать?");
+		name = prompt("Название вашего магазина", '').toUpperCase();
+		time = 21;
+	},
+	// Присваиваем массиву значния введённые пользователем
+	chooseGoods: function chooseGoods() {
+		for (let i = 0; i < 5; i++ ) {
 
-		if ((typeof(a)) === 'string' && (typeof(a)) !== null && a != '' && a.length < 50 ) {
-			console.log('Всё верно!');
-			mainList.shopGoods[i] = a;
-		} else {
+			let a = prompt("Какой тип товаров будем продавать?", '');
 
-			if ( a == '') {
-				let b = confirm('Вы не ввели название товара, хотите оставить поле пустым?');
-				if (b) {
-					mainList.shopGoods[i] = '';
-				} else {
-					i--;
-					alert("Введите свой товар");
+			if ((typeof(a)) === 'string' && (typeof(a)) !== null && a != '' && a.length < 50 ) {
+				console.log('Всё верно!');
+				mainList.shopGoods[i] = a;
+			} else {
+
+				if ( a == '') {
+					let b = confirm('Вы не ввели название товара, хотите оставить поле пустым?');
+					if (b) {
+						mainList.shopGoods[i] = '';
+					} else {
+						i--;
+						alert("Введите свой товар");
+					}
 				}
 			}
-
 		}
-	}
-}
+	},
+	// Время работы магазина
+	workTime: function workTime(time) {
+		if (time < 0 ) {
+			console.log ("В прошлое мы не можем вернутся!");
+		} else if (time > 8 && time < 20) {
+			console.log ("Время работать!");
+			mainList.open = true;
+			} else if (time < 24) {
+				console.log ("Слишком поздно");
+				} else {
+					console.log ("В сутках только 24 часа!");
+					}
+	},
+	//  Бюджет на 1 день
+	budget: function budget() {
+		let budgetDay = money/30;
 
-chooseGoods();
+		alert("Бюджет на 1 день" + " " + "=" + " " + budgetDay);
+	},
+	// 80% от цены 
+	priceNew: function priceNew() {
+			if (mainList.discount == true) {
+				price = +prompt("Ваш цена?", '');
 
+				let partPrice = price*0.8;
 
-// Время работы магаза
-function workTime(time) {
-if (time < 0 ) {
-	console.log ("В прошлое мы не можем вернутся!");
-} else if (time > 8 && time < 20) {
-	console.log ("Время работать!");
-	} else if (time < 24) {
-		console.log ("Слишком поздно");
-		} else {
-			console.log ("В сутках только 24 часа!");
+				console.log ( Math.round (partPrice) );
 			}
-}
-
-workTime(23);
-
-
-//  Бюджет на 1 день
-function budget() {
-let budgetDay = money/30;
-
-alert("Бюджет на 1 день" + " " + "=" + " " + budgetDay);
-
-console.log (mainList);
-}
-
-budget();
-
-// 80% от цены 
-function priceNew() {
-
-	price = +prompt("Ваш цена?", '');
-
-	let partPrice = price*0.8;
-
-	console.log ( Math.round (partPrice) );
-}
-
-priceNew();
-
-function employers() {
+	},
+	// Имна сотрудников
+	employers: function employers() {
   	for (var i = 0; i < 4; i++) {
 
-  		let employer = prompt("Введите имя сотрудника");
+  		let employer = prompt("Введите имя сотрудника", '');
   		if (employer == "" || employer == null ) {
   			alert("Нужно ввести имя сотрудника");
   			i--;
@@ -108,7 +88,30 @@ function employers() {
   			  i--;
   			} 
   	}
+  },
+  // Название товаров
+  chooseShopItems: function chooseShopItems() {
+  	let items = prompt("Перечислете через запятую товары", '');
 
+ 		while ( items == "" || items == null ) {
+ 			items = prompt("Перечислете через запятую товары", '');
+ 		}
+  	mainList.shopItems = items.split(",");
+  	mainList.shopItems.push(prompt("Подождите, ещё", ''));
+  	mainList.shopItems.sort();
   }
+}
 
-  employers();
+mainList.chooseShopItems();
+
+// Перебор массива shopItems 
+	mainList.shopItems.forEach(function(item, i, arr) {
+	  alert( ++i + ": " + item + " (У нас вы можете купить:" + mainList.shopItems + ")" );
+});
+
+// Перебор всего объекта
+for( let key in mainList) {
+	console.log( "Наш магазин включает в себя: " + key );
+}
+
+console.log (mainList);
