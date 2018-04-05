@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  height: 100vh;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-rocket {
+  position: absolute;
+  top: 100%;
+  left: -9%;
+  transform: rotate(90deg);
+}
+
+.button {
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 5px;
+  position: absolute;
+  left: 75%;
+  top: 80%;
+}
+
+.button:hover {
+  border: 2px solid #fff;
+}
