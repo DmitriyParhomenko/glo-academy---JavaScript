@@ -143,7 +143,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	for ( let i = 0; i < form.length; i++ ) {
 
-	let form = document.getElementsByClassName('main-form')[i];
+	let form = document.getElementsByClassName('main-form')[i],
+				 input = document.getElementsByClassName('clear_input');
 	
 		statusMessage = document.createElement('div');
 		statusMessage.classList.add('status');
