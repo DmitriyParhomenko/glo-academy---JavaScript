@@ -346,6 +346,10 @@
             width: 230px
             height: 500px
             margin: 0 auto
+            &-easy
+                width: 230px
+                height: 477px
+                margin: 0 auto
             &-skin
                 position: absolute
                 margin-top: 30px
@@ -406,16 +410,36 @@
         width: 370px
         height: 600px
         border-radius: 10px
-        padding: 60px 20px 0 20px 
+        padding: 95px 20px 0 20px 
         background-color: #191e25
         background-image: linear-gradient(to right, #262b35 0%, #2f3540 100%)
+        &-easy
+            position: relative
+            height: 600px
         .style-text
             color: #ffffff
             font-size: 12px
             font-weight: 500
             text-align: center
             margin-bottom: 10px
-        .prev, .next
+        .preview
+            height: 400px
+        .prev
+            position: absolute
+            top: 30%
+            left: 5%
+            width: 40px
+            height: 40px
+            background-color: #1c2028
+            border-radius: 100%
+            cursor: pointer
+            transition: 0.5s
+            &:hover
+                box-shadow: 0 0 15px #2068df
+        .next
+            position: absolute
+            left: 83%
+            top: 31%
             width: 40px
             height: 40px
             background-color: #1c2028
