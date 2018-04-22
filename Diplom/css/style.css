@@ -72,7 +72,6 @@
 .main {
   min-height: 670px;
   padding-top: 10px;
-  display: block;
 }
 
 .main-cards {
@@ -95,7 +94,7 @@
 }
 
 .main-cards-item-active {
-  border: 3px solid #1f8ce2;
+  /* border: 3px solid #1f8ce2 */
 }
 
 .main-cards-item .candidate-block {
@@ -108,6 +107,15 @@
   width: 90px;
   height: 195px;
   position: relative;
+}
+
+.main-cards-item .candidate-block .person-easy {
+  transform: translate(-38%);
+  width: 112px;
+  height: 214px;
+  background-size: 88px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-cards-item .candidate-block .person-skin {
@@ -436,9 +444,12 @@
 }
 
 .custom-char .person-easy {
-  width: 230px;
-  height: 477px;
   margin: 0 auto;
+  width: 200px;
+  height: 480px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 160px;
 }
 
 .custom-char .person-skin {
@@ -507,17 +518,20 @@
 
 .custom-style {
   display: none;
+  position: relative;
   width: 370px;
   height: 600px;
   border-radius: 10px;
-  padding: 95px 20px 0 20px;
+  padding: 60px 20px 0 20px;
   background-color: #191e25;
   background-image: linear-gradient(to right, #262b35 0%, #2f3540 100%);
 }
 
 .custom-style-easy {
-  position: relative;
-  height: 600px;
+  position: absolute;
+  left: 80px;
+  margin-left: 25px;
+  top: 150px;
 }
 
 .custom-style .style-text {
@@ -528,16 +542,12 @@
   margin-bottom: 10px;
 }
 
-.custom-style .preview {
-  height: 400px;
-}
-
 .custom-style .prev {
-  position: absolute;
-  top: 30%;
-  left: 5%;
   width: 40px;
   height: 40px;
+  position: absolute;
+  top: 105px;
+  left: -70px;
   background-color: #1c2028;
   border-radius: 100%;
   cursor: pointer;
@@ -549,11 +559,11 @@
 }
 
 .custom-style .next {
-  position: absolute;
-  left: 83%;
-  top: 31%;
   width: 40px;
   height: 40px;
+  position: absolute;
+  bottom: 90px;
+  right: -70px;
   background-color: #1c2028;
   border-radius: 100%;
   cursor: pointer;
@@ -705,5 +715,84 @@
   height: 80px;
   background: #aeaeae url("../img/clothes/slide/clothes-6.png") center no-repeat;
   background-size: 20%;
+  border-radius: 10px;
+}
+
+.custom .preview-1 {
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-1.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-2 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-2.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-3 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-3.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-4 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-4.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-5 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-5.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-6 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-6.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-7 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-7.png") center no-repeat;
+  background-size: 40%;
+  border-radius: 10px;
+}
+
+.custom .preview-8 {
+  display: none;
+  margin: 0 auto;
+  width: 160px;
+  height: 210px;
+  background: #f2f2f2 url("../img/construct-8.png") center no-repeat;
+  background-size: 40%;
   border-radius: 10px;
 }

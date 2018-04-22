@@ -1,130 +1,366 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-	// Анимация
-
-	function fade(elem, t, f){
-  // кадров в секунду (по умолчанию 50)
-  let fps = f || 50; 
-  // время работы анимации (по умолчанию 500мс)
-  let time = t || 500; 
-  // сколько всего покажем кадров
-  let steps = time / (1000 / fps);   
-  // текущее значение opacity - изначально 0
-  let op = 1;
-  // изменение прозрачности за 1 кадр
-  let d0 = op / steps;
-  
-  // устанавливаем интервал (1000 / fps) 
-  // например, 50fps -> 1000 / 50 = 20мс  
-  let timer = setInterval(function(){
-    // уменьшаем текущее значение opacity
-    op -= d0;
-    // устанавливаем opacity элементу DOM
-    elem.style.opacity = op;
-    // уменьшаем количество оставшихся шагов анимации
-    steps--;
-    
-    // если анимация окончена
-    if(steps <= 0){
-      // убираем интервал выполнения
-      clearInterval(timer);
-      // и убираем элемент из потока документа
-      elem.style.display = 'none';
-    }
-  }, (1000 / fps));
-}
+	let	createBtn = document.getElementById("popup-btn"),
+		overlay = document.getElementsByClassName("overlay")[0],
+		mainBlock = document.getElementsByClassName("main")[0],
+		customBlock = document.getElementsByClassName("custom")[0];
 
 
-	// Модальное окно
 
-	function showCustom() {
-			let custom = document.getElementsByClassName('custom')[0],
-				person = document.getElementsByClassName('person-easy')[0],
-				sliderPreview = document.querySelector('.preview');
+	// Убираем оверлей и карточку персонажей, отображаем блок кастомизации
 
+	createBtn.addEventListener("click", Start);
 
-			custom.style.display = "flex";
-			person.style.cssText = "background: url(../img/candidate-1.png) center no-repeat; \
-									background-size: 200px; \
-									";
+	function Start() {
+		overlay.classList.add("bounceOut", "animated");
+		mainBlock.classList.add("fadeOutDownBig", "animated");
 
-			sliderPreview.style.cssText = "background: url(../img/candidate-1.png) center no-repeat; \
-										    border-radius: 50px; \
-										    background-size: 145px; \
-							    			border: solid 1px;";
-			
-			for ( let i = 0; i < custom.children.length; i++) {
-					custom.children[i].style.display = 'block';
-				}
-		}
+		setTimeout(function() {
+			overlay.style.display = "none";
+			mainBlock.style.display = 'none';
+			customBlock.style.display = 'flex';
+			for ( let i = 0; i < customBlock.children.length; i++) {
+				customBlock.children[i].style.display = 'block';
+			}
+			customBlock.classList.add("fadeInUp", "animated");
+		}, 1000);
 
-	function hideCustom() {
-			let custom = document.getElementsByClassName('custom')[0];
+		setTimeout(function() {
+			overlay.classList.remove("bounceOut", "animated");
+			mainBlock.classList.remove("fadeOutDownBig", "animated");
+			customBlock.classList.remove("fadeInUp", "animated");
 
-
-			custom.style.display = "none";
-			
-			for ( let i = 0; i < custom.children.length; i++) {
-					custom.children[i].style.display = '';
-				}
-
-			animatedMain.style.display = "block";
-			animatedMain.style.opacity = "1";
-
-			
-		}
+		}, 4000);
+	}
 
 
 
 
-	let popupBtn = document.getElementById('popup-btn'),
-		animatedMain = document.getElementsByClassName('main')[0],
-		animatedOverlay = document.getElementsByClassName('overlay')[0];
+	let Slider = document.querySelector(".custom-style-easy"),
+		preview = Slider.getElementsByClassName("preview"),
+		prev = Slider.querySelector(".prev"),
+		next = Slider.querySelector(".next"),
+		slideIndex = 1;
+
+
+
+	// Блок кастомизации персонажа
+
+	let name = document.getElementById("name"),
+		age = document.getElementById("age"),
+		sex = document.querySelectorAll("input[name='sex']"),
+		politView = document.getElementById("select"),
+		bio = document.getElementById("bio"),
+		nameValue,
+		ageValue,
+		politViewValue = politView.options[politView.selectedIndex].value,
+		sexValue = "Мужской",
+		male = document.getElementsByName("Мужской"),
+		female = document.getElementsByName("Женский"),
+		bioValue;
+
+	let skin = document.getElementById("person-easy");
+
+
+
 		
-		popupBtn.addEventListener('click', function(){
+	name.addEventListener("change", function() { 							
+		if ( !isNaN( +name.value / 2) || name.value.length < 2) {
+			alert("Введите имя правильно!");
+		} else {
+			nameValue = name.value;
+		}
+	});
 
-			fade(animatedMain, 1000, 50);
-			fade(animatedOverlay, 1000, 50);
+		age.addEventListener("change", function() {								
+			if (isNaN( +age.value / 2) || age.value == "" || age.value > 100 || age.value < 16 || age.value == " ") {
+				alert("Введите возраст правильно!");
+			} else {
+				ageValue = age.value;
+			}
+		});
 
-			setTimeout(function() {
-			  showCustom();
-			}, 1500);
+		politView.addEventListener("change", function() {                            
+			politViewValue = politView.options[politView.selectedIndex].value;
+	
+		});
 
+		bio.addEventListener("change", function() { 				
+			if ( bio.value == '' || bio.value.length < 5 || bio.value == "  " ) {
+				alert("Вы не ввели свою биографию!");
+			} else {
+				bioValue = bio.value;
+			}
+		});
+
+		// Призначения героя, при переключения пола
+		for (let i = 0 ; i < sex.length ; i++) { 
+			sex[i].addEventListener("change", function() {
+				let randMan = 1 + Math.round(Math.random() * 2),
+								randWoman = 5 + Math.round(Math.random() * 2),
+
+				sexValue = sex[i].value;
+				if (sexValue == "Мужской") {
+
+					skin.style.backgroundImage = `url('img/construct-${randMan}.png')`;
+					for ( let s = 0; s < preview.length; s++) {
+						preview[s].style.display = 'none';
+					}
+					preview[randMan - 1].style.display = 'block';
+
+					} else {
+
+					skin.style.backgroundImage = `url('img/construct-${randWoman}.png')`;
+					for ( let x = 0; x < preview.length; x++) {
+						preview[x].style.display = 'none';
+					}
+					preview[randWoman - 1].style.display = 'block';
+
+				}
+				
+			});
+		}
+
+
+//  (Cлайды)
+
+		mainSlider(slideIndex);
+
+		function mainSlider(n) {
+			if (sexValue == "Мужской") {
+
+				if (n > preview.length - 4 ) {
+					slideIndex = 1;
+				}
+				if ( n < 1) {
+					slideIndex = preview.length - 4;
+				}
+				for ( let i = 0; i < preview.length; i++) {
+					preview[i].style.display = 'none';
+				}
+				preview[slideIndex - 1].style.display = 'block';
+
+    // Смена персонажа
+				if ( n > 4) {
+					n = 1;
+				} 
+				if (n < 1) {
+					n = slideIndex;
+				}
+				skin.style.backgroundImage = `url('img/construct-${n}.png')`;
+
+			} else {
+
+				if (n > preview.length ) {
+					slideIndex = 5;
+				}
+				if ( n < 5) {
+					slideIndex = preview.length;
+				}
+				for ( let i = 0; i < preview.length; i++) {
+					preview[i].style.display = 'none';
+				}
+				preview[slideIndex - 1].style.display = 'block';
+
+
+				// Смена персонажа
+				if ( n > 8) {
+					n = 5;
+				} 
+				if (n < 4) {
+					n =  slideIndex ;
+				}
+				skin.style.backgroundImage = `url('img/construct-${n}.png')`;
+
+			}
+		}
+		function toggleMain(n) {
+			mainSlider(slideIndex += n);
+		}
+
+		function startSliders() {
+
+			next.addEventListener("click", function() {			// Переключение  вперед
+					toggleMain(1);		
+			}); 
+			prev.addEventListener("click", function() {			// Переключение  назад
+					toggleMain(-1);			
+			}); 
+		}
+
+
+		startSliders();
+
+
+
+// Переход на главный экран и создание карточки своего кандидата
+
+		let card = document.getElementsByClassName("main-cards-item"),
+			readyBtn = document.getElementById("ready"),
+			result,
+			resultCount,
+			resultBar;
+
+		readyBtn.addEventListener("click",  function() {
+				if ( !isNaN( +name.value / 2) || isNaN( +age.value / 2) || age.value == "" || age.value > 100 || age.value < 18  || age.value == " " ||  bio.value == '' || bio.value.length < 5 || bio.value == "  ") {
+					alert("Вы ввели некорректно данные!"); 
+				} else {
+					openMain();
+					saveResults();
+				}
+				nullResalts();
 		});
 
 
-	// Информация о кандидате
+		function saveResults() {
 
-	let readyBtn = document.getElementById('ready'),
-		nameInputId = document.getElementById('name'),
-		nameClass = document.getElementsByClassName('name')[0],
-		age = document.getElementById('age');
+			let	userCard = card[0].cloneNode(true),
+				mainCards = document.getElementsByClassName("main-cards")[0],
+				candidateBlock = userCard.querySelector(".candidate-block"),
+				/*photo = userCard.querySelector(".photo"),		*/		
+				person = document.getElementsByClassName("person-easy")[0],
+				userImg = person.cloneNode(true),
+				userName = userCard.querySelector(".name"),
+				userAge = userCard.querySelector(".age"),
+				userSex = userCard.querySelector(".sex"),
+				userViews = userCard.querySelector(".views"),
+				userBio = userCard.querySelector(".bio");
 
-		console.log(nameClass);
-		console.log(nameInputId);
-
-
-	readyBtn.addEventListener('click', () => {
-
-		
-		 if (nameInputId.value == "" || !isNaN(nameInputId.value) ) {
-			showCustom();	
-		} else {
-			nameClass.textContent = nameInputId.value;
-			hideCustom();
-		}
-
-
-		
-
-	});
 	
+				
+
+					// Оставляем 3 карточки
+				for(let i = 2; i < card.length; i++) {
+					card[i].parentNode.removeChild(card[i]);
+				}
+
+					// Создание карточки
+					mainCards.insertBefore( userCard , mainCards.children[2]);
+
+
+					// Перенос кандината
+					candidateBlock.removeChild(candidateBlock.children[0]); 										// Удаляем стандартное изображение	
+					candidateBlock.insertBefore(userImg, candidateBlock.children[0]);	//Вставляем изображение из кастомного экрана"
+				/*	photo.parentNode.removeChild(photo); 	*/
+					userName.innerHTML = `${nameValue}`;								                      // Вставляем имя 
+					userAge.innerHTML = `${ageValue} лет`;								                    // Вставляем возраст
+					userSex.innerHTML = `${sexValue}`;									                       // Вставляем пол 
+					userViews.innerHTML = `${politViewValue}`;							                 // Вставляем политический взгляд 
+					userBio.innerHTML = `${bioValue}`;									                       // Вставляем биографию
+			}
+
+					function openMain() {
+				// Переход на экран c выборами
+					customBlock.classList.add("fadeOutDownBig", "animated");
+
+					
+					setTimeout(function() { 
+						customBlock.style.display = 'none';
+						for ( let i = 0; i < customBlock.children.length; i++) {
+							customBlock.children[i].style.display = 'none';
+						}
+						mainBlock.style.display = 'block';
+						mainBlock.classList.add("fadeInDown", "animated");
+					}, 2000);
+
+					setTimeout(function() {
+						mainBlock.classList.remove("fadeInDown", "animated");
+						customBlock.classList.remove("fadeOutDownBig", "animated");
+					}, 4000);
+				}
+
+				
+
+
+			function nullResalts() {
+				
+				// Обнуление результатов
+				for (let i = 0; i < card.length; i++) {
+					result = card[i].querySelector(".result");
+					resultCount = result.querySelector(".result-count");
+					resultBar = result.querySelector(".progress-bar");
+					resultCount.innerHTML = "0%";
+					resultBar.style.height = "0%";
+				}
+			}
+
+
+			
+
+			// Переход на блок кастомизации
+
+				let reset = document.getElementById("reset");
+				reset.addEventListener("click", function() {
+					Start();
+				});
+
+
+			// Проведение выборов
+				let voting = document.getElementById("voting");
+				let firstBar = Math.random() * 100,
+					secondBar =  (100 - firstBar) * Math.random(),
+					thirdBar = 100 - (secondBar + firstBar);
+
+				voting.addEventListener("click", function(event) {
+					firstBar = Math.random() * 100,
+					secondBar =  (100 - firstBar) * Math.random(),
+					thirdBar = 100 - (secondBar + firstBar);
+					Voting(event);
+				});
+
+
+				function Voting(event) {
+					let	resultCount = mainBlock.querySelectorAll(".result-count"),
+						resultBar = mainBlock.querySelectorAll(".progress-bar");
+
+					if (event.target == crime) {
+						if (firstBar + 25 >= 100){
+							firstBar = 100;
+						} else {
+							firstBar = firstBar + 25;
+						}
+			 
+						secondBar =  Math.random() * (100 - firstBar);
+			 			thirdBar = 100 - (secondBar + firstBar);
+
+						// Результаты голосования
+						for (let i = 0; i < card.length; i++) {
+
+								resultCount[0].innerHTML = `${thirdBar.toFixed(2) }%`;
+								resultBar[0].style.height = `${thirdBar.toFixed(2)}%`;
+
+								resultCount[1].innerHTML = `${secondBar.toFixed(2)}%`;
+								resultBar[1].style.height = `${secondBar.toFixed(2)}%`;
+								
+								resultCount[2].innerHTML = `${(firstBar).toFixed(2)}%`;
+								resultBar[2].style.height = `${(firstBar).toFixed(2)}%`;
+							}
+						} else {
+						// Результаты голосования
+						for (let i = 0; i < card.length; i++) {
+
+								resultCount[0].innerHTML = `${thirdBar.toFixed(2)}%`;
+								resultBar[0].style.height = `${thirdBar.toFixed(2)}%`;
+
+								resultCount[1].innerHTML = `${secondBar.toFixed(2)}%`;
+								resultBar[1].style.height = `${secondBar.toFixed(2)}%`;
+								
+								resultCount[2].innerHTML = `${firstBar.toFixed(2)}%`;
+								resultBar[2].style.height = `${firstBar.toFixed(2)}%`;	
+						}
+					}
+				}
+
+	// Мой кандидат победит!!!! 
+	 let crime = document.getElementById("crime");
+
+	 	crime.addEventListener("click", function(event) {
+	 		Voting(event);
+	 	})
+
+
 });
 
 
 
 
-
-/*for ( let i = 0; i < input.length; i++) {
-	input[i].value = '';  // Очищаем поля ввода
-}*/
