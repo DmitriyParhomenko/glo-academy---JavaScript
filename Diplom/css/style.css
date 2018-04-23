@@ -91,6 +91,7 @@
   font-weight: 500;
   line-height: 19px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+  word-break: break-all;
 }
 
 .main-cards-item-active {
@@ -110,12 +111,13 @@
 }
 
 .main-cards-item .candidate-block .person-easy {
-  transform: translate(-38%);
-  width: 112px;
-  height: 214px;
-  background-size: 88px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90px;
+  height: 195px;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
 }
 
 .main-cards-item .candidate-block .person-skin {
@@ -444,12 +446,14 @@
 }
 
 .custom-char .person-easy {
-  margin: 0 auto;
-  width: 200px;
-  height: 480px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 160px;
+  position: absolute;
+  margin-top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 180px;
+  height: 450px;
+  background: url("../img/construct-1.png") center no-repeat;
+  background-size: contain;
 }
 
 .custom-char .person-skin {
@@ -718,7 +722,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-1 {
+.custom-style .preview-1 {
   margin: 0 auto;
   width: 160px;
   height: 210px;
@@ -727,7 +731,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-2 {
+.custom-style .preview-2 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -737,7 +741,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-3 {
+.custom-style .preview-3 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -747,7 +751,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-4 {
+.custom-style .preview-4 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -757,7 +761,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-5 {
+.custom-style .preview-5 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -767,7 +771,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-6 {
+.custom-style .preview-6 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -777,7 +781,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-7 {
+.custom-style .preview-7 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -787,7 +791,7 @@
   border-radius: 10px;
 }
 
-.custom .preview-8 {
+.custom-style .preview-8 {
   display: none;
   margin: 0 auto;
   width: 160px;

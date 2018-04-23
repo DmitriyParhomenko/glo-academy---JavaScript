@@ -79,6 +79,7 @@
             font-weight: 500
             line-height: 19px
             box-shadow: 0px 0px 30px rgba(0,0,0,.4)
+            word-break: break-all
             &-active
                 /* border: 3px solid #1f8ce2 */
             .candidate-block
@@ -90,12 +91,13 @@
                     height: 195px
                     position: relative
                     &-easy
-                        transform: translate(-38%)
-                        width: 112px
-                        height: 214px
-                        background-size: 88px
+                        position: absolute
+                        left: 50%
+                        transform: translate(-50%)
+                        width: 90px
+                        height: 195px
+                        background-size: contain
                         background-repeat: no-repeat
-                        background-position: center
                     &-skin
                         position: absolute
                         left: 50%
@@ -351,12 +353,14 @@
             height: 500px
             margin: 0 auto
             &-easy
-                margin: 0 auto
-                width: 200px
-                height: 480px
-                background-repeat: no-repeat
-                background-position: center center
-                background-size: 160px
+                position: absolute
+                margin-top: 30px
+                left: 50%
+                transform: translate(-50%)
+                width: 180px
+                height: 450px
+                background: url(../img/construct-1.png) center no-repeat
+                background-size: contain
             &-skin
                 position: absolute
                 margin-top: 30px
@@ -565,67 +569,67 @@
                 background-size: 20%
                 border-radius: 10px
 
-    .preview
-        &-1
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-1.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-2
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-2.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-3
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-3.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-4
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-4.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-5
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-5.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-6
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-6.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-7
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-7.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
-        &-8
-            display: none
-            margin: 0 auto
-            width: 160px
-            height: 210px
-            background: #f2f2f2 url(../img/construct-8.png) center no-repeat
-            background-size: 40%
-            border-radius: 10px
+        .preview
+            &-1
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-1.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-2
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-2.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-3
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-3.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-4
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-4.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-5
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-5.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-6
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-6.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-7
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-7.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px
+            &-8
+                display: none
+                margin: 0 auto
+                width: 160px
+                height: 210px
+                background: #f2f2f2 url(../img/construct-8.png) center no-repeat
+                background-size: 40%
+                border-radius: 10px

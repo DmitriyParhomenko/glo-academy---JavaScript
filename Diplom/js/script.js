@@ -55,8 +55,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		ageValue,
 		politViewValue = politView.options[politView.selectedIndex].value,
 		sexValue = "Мужской",
-		male = document.getElementsByName("Мужской"),
-		female = document.getElementsByName("Женский"),
+		male = document.getElementById("male"),
+		female = document.getElementById("female"),
 		bioValue;
 
 	let skin = document.getElementById("person-easy");
@@ -93,11 +93,13 @@ window.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 
+
+
 		// Призначения героя, при переключения пола
 		for (let i = 0 ; i < sex.length ; i++) { 
 			sex[i].addEventListener("change", function() {
-				let randMan = 1 + Math.round(Math.random() * 2),
-								randWoman = 5 + Math.round(Math.random() * 2),
+				let randMan = n = 1 + Math.round(Math.random() * 2),
+								randWoman = n = 5 + Math.round(Math.random() * 2),
 
 				sexValue = sex[i].value;
 				if (sexValue == "Мужской") {
@@ -124,11 +126,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 //  (Cлайды)
 
+
 		mainSlider(slideIndex);
 
 		function mainSlider(n) {
 			if (sexValue == "Мужской") {
-
 				if (n > preview.length - 4 ) {
 					slideIndex = 1;
 				}
@@ -139,8 +141,7 @@ window.addEventListener('DOMContentLoaded', function() {
 					preview[i].style.display = 'none';
 				}
 				preview[slideIndex - 1].style.display = 'block';
-
-    // Смена персонажа
+	// Переключение 
 				if ( n > 4) {
 					n = 1;
 				} 
@@ -148,9 +149,10 @@ window.addEventListener('DOMContentLoaded', function() {
 					n = slideIndex;
 				}
 				skin.style.backgroundImage = `url('img/construct-${n}.png')`;
+				
+
 
 			} else {
-
 				if (n > preview.length ) {
 					slideIndex = 5;
 				}
@@ -161,13 +163,11 @@ window.addEventListener('DOMContentLoaded', function() {
 					preview[i].style.display = 'none';
 				}
 				preview[slideIndex - 1].style.display = 'block';
-
-
-				// Смена персонажа
 				if ( n > 8) {
 					n = 5;
+
 				} 
-				if (n < 4) {
+				if (n < 5) {
 					n =  slideIndex ;
 				}
 				skin.style.backgroundImage = `url('img/construct-${n}.png')`;
@@ -178,18 +178,30 @@ window.addEventListener('DOMContentLoaded', function() {
 			mainSlider(slideIndex += n);
 		}
 
+
+		////////////////////////////////////////////////////////////////////
+
+			console.log(sexValue);
+			console.log(male.value);
+	
+
 		function startSliders() {
 
+		
 			next.addEventListener("click", function() {			// Переключение  вперед
 					toggleMain(1);		
 			}); 
 			prev.addEventListener("click", function() {			// Переключение  назад
 					toggleMain(-1);			
 			}); 
+
+
 		}
 
 
 		startSliders();
+
+
 
 
 
@@ -217,8 +229,8 @@ window.addEventListener('DOMContentLoaded', function() {
 			let	userCard = card[0].cloneNode(true),
 				mainCards = document.getElementsByClassName("main-cards")[0],
 				candidateBlock = userCard.querySelector(".candidate-block"),
-				/*photo = userCard.querySelector(".photo"),		*/		
-				person = document.getElementsByClassName("person-easy")[0],
+			
+				person = customBlock.getElementsByClassName("person")[0],
 				userImg = person.cloneNode(true),
 				userName = userCard.querySelector(".name"),
 				userAge = userCard.querySelector(".age"),
@@ -240,8 +252,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 					// Перенос кандината
 					candidateBlock.removeChild(candidateBlock.children[0]); 										// Удаляем стандартное изображение	
-					candidateBlock.insertBefore(userImg, candidateBlock.children[0]);	//Вставляем изображение из кастомного экрана"
-				/*	photo.parentNode.removeChild(photo); 	*/
+					/*person.removeChild(person.children[0]); */										       
+/*					photo.parentNode.removeChild(photo); */					
+				candidateBlock.insertBefore(userImg, candidateBlock.children[0]);	//Вставляем изображение из кастомного экрана"
+
+
 					userName.innerHTML = `${nameValue}`;								                      // Вставляем имя 
 					userAge.innerHTML = `${ageValue} лет`;								                    // Вставляем возраст
 					userSex.innerHTML = `${sexValue}`;									                       // Вставляем пол 
@@ -291,7 +306,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 				let reset = document.getElementById("reset");
 				reset.addEventListener("click", function() {
-					Start();
+					Start();	
+					saveResults();
 				});
 
 
