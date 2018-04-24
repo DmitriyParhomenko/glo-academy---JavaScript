@@ -325,15 +325,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 								
 
-								/*if (firstBar + 25 >= 100){
+								/*if (firstBar >= 100){
 									firstBar = 100;
 								} else {
-									firstBar = firstBar + 25;
+									firstBar = Math.random() * 50 + 25;
 								}*/
 
-								firstBar = Math.random() + ( 25 + thirdBar) ;
+								firstBar = Math.random() * 50 + 25;
+
 								secondBar =  Math.random() * (100 - firstBar);
-					 		thirdBar = 100 - (secondBar + firstBar);
+					 		thirdBar = 100- (secondBar + firstBar);
 
 								// Результаты голосования
 								for (let i = 0; i < card.length; i++) {
