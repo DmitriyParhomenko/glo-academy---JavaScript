@@ -526,7 +526,7 @@
   width: 370px;
   height: 600px;
   border-radius: 10px;
-  padding: 60px 20px 0 20px;
+  padding: 180px 20px 0 20px;
   background-color: #191e25;
   background-image: linear-gradient(to right, #262b35 0%, #2f3540 100%);
 }
@@ -550,8 +550,7 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 105px;
-  left: -70px;
+  left: 10%;
   background-color: #1c2028;
   border-radius: 100%;
   cursor: pointer;
@@ -566,8 +565,7 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  bottom: 90px;
-  right: -70px;
+  right: 10%;
   background-color: #1c2028;
   border-radius: 100%;
   cursor: pointer;
@@ -580,7 +578,8 @@
 
 .custom-style .skin,
 .custom-style .hair,
-.custom-style .clothes {
+.custom-style .clothes,
+.custom-style .preview {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -589,7 +588,8 @@
 
 .custom-style .skin-color-1,
 .custom-style .hair-color-1,
-.custom-style .clothes-color-1 {
+.custom-style .clothes-color-1,
+.custom-style .preview-color-1 {
   width: 160px;
   height: 80px;
   border-radius: 10px;
@@ -598,7 +598,8 @@
 
 .custom-style .skin-color-2,
 .custom-style .hair-color-2,
-.custom-style .clothes-color-2 {
+.custom-style .clothes-color-2,
+.custom-style .preview-color-2 {
   display: none;
   width: 160px;
   height: 80px;
@@ -608,7 +609,8 @@
 
 .custom-style .skin-color-3,
 .custom-style .hair-color-3,
-.custom-style .clothes-color-3 {
+.custom-style .clothes-color-3,
+.custom-style .preview-color-3 {
   display: none;
   width: 160px;
   height: 80px;
@@ -722,7 +724,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-1 {
+.custom-style .preview-style-1 {
   margin: 0 auto;
   width: 160px;
   height: 210px;
@@ -731,7 +733,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-2 {
+.custom-style .preview-style-2 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -741,7 +743,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-3 {
+.custom-style .preview-style-3 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -751,7 +753,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-4 {
+.custom-style .preview-style-4 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -761,7 +763,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-5 {
+.custom-style .preview-style-5 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -771,7 +773,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-6 {
+.custom-style .preview-style-6 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -781,7 +783,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-7 {
+.custom-style .preview-style-7 {
   display: none;
   margin: 0 auto;
   width: 160px;
@@ -791,7 +793,7 @@
   border-radius: 10px;
 }
 
-.custom-style .preview-8 {
+.custom-style .preview-style-8 {
   display: none;
   margin: 0 auto;
   width: 160px;
