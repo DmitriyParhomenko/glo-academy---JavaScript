@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 
 			age.addEventListener("change", function() {								
-				if (isNaN( +age.value / 2) || age.value == "" || age.value > 100 || age.value < 16 || age.value == " ") {
+				if (isNaN( +age.value / 2) || age.value == "" || age.value > 100 || age.value < 35 || age.value == " ") {
 					alert("Введите возраст правильно!");
 				} else {
 					ageValue = age.value;
@@ -296,10 +296,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 					// Переход на блок кастомизации
 
-						let reset = document.getElementById("reset");
+						let reset = document.getElementById("reset"),
+										clear = document.getElementsByClassName('clear');
+										
 						reset.addEventListener("click", function() {
 							Start();	
 							saveResults();
+
+							for ( let i = 0; i < clear.length; i++) {
+								clear[i].value = '';  // Очищаем поля ввода
+							}
+
 						});
 
 
