@@ -1,0 +1,63 @@
+.about
+	padding-top: 76px
+	padding-bottom: 76px
+	&-img
+		flex-basis: 263px
+		&1
+			position: relative
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 61px
+				left: 0
+				width: 263px
+				height: 51px
+				border-radius: 2px
+				z-index: -1
+				background-color: $about-color-photo1
+		&2
+			position: relative
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 61px
+				left: 0
+				width: 263px
+				height: 51px
+				border-radius: 2px
+				z-index: -1
+				background-color: $about-color-photo2
+		&__photo
+			margin-left: 17px
+			z-index: 1
+		&__title
+			margin-left: 17px
+	&-company
+		text-align: justify
+		&__descr
+			color: $text-color
+			font-family: "Proxima Nova Light"
+			font-size: 18px
+			font-weight: 300
+			line-height: 25px
+			margin-bottom: 26px
+			p:first-child
+				margin-bottom: 13px
+		&__video
+			position: relative
+			padding-bottom: 56.25%
+			padding-top: 25px
+			height: 0
+			iframe
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 108%
+
+		&__img
+			display: flex
+			justify-content: space-between
+

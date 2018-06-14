@@ -1,0 +1,71 @@
+.contacts
+	padding-top: 80px
+	padding-bottom: 80px
+	position: relative
+	&-title
+		margin-bottom: 51px
+	&-address
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-height: 409px
+		padding-left: 35px
+	&-block
+		&__title
+			color: $text-color-dark
+			font-family: "Proxima Nova Semibold"
+			font-size: 18px
+			font-weight: 400
+			line-height: 22px
+			margin-bottom: 10px
+		&__subtitle
+			color: $text-color-dark
+			font-family: "ProximaNova-Regular"
+			font-size: 16px
+			font-weight: 400
+			line-height: 22px
+			top: 50%
+			margin-top: -11px
+			left: 43px
+			position: absolute
+		&__double
+			display: flex
+			max-height: 32px
+			position: relative
+			margin-bottom: 33px
+		&__icon
+			&1
+				position: relative
+				width: 32px
+				min-height: 32px
+				background-image: linear-gradient(45deg, #1c8fd4 0%, #7e66e7 100%)
+				border-radius: 32px
+				&::before
+					content: url(../img/contacts/address.png)
+					display: block
+					position: absolute
+					top: 50%
+			  margin-top: -10px
+			  left: 50%
+			  margin-left: -5px
+			&2
+				position: relative
+				width: 32px
+				min-height: 32px
+				background-image: linear-gradient(45deg, #1c8fd4 0%, #7e66e7 100%)
+				border-radius: 32px
+				&::before
+					content: url(../img/contacts/phone.png)
+					display: block
+					position: absolute
+					top: 50%
+			  margin-top: -10px
+			  left: 50%
+			  margin-left: -6px
+	&-button
+		width: 170px
+		height: 45px
+
+	.map
+		width: 730px
+		height: 409px

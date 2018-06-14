@@ -1,0 +1,196 @@
+textarea
+	&:focus
+		outline: none
+.slick-slide
+	margin-right: 10px
+	margin-left: 10px
+	&:focus
+		outline: none
+ img
+ 	display: inline
+.feedback
+	&-slider
+		width: 100%
+		margin: 0
+.section
+	&-title
+		&__feedback
+			margin-bottom: 51px
+.center
+	text-align: center
+.button
+	&__feedback
+		padding: 18px 51px
+
+/* ////////////////////////// one slider ////////////////////////////////  */
+.feedback
+	padding-top: 80px
+	padding-bottom: 80px
+	&-one
+		text-align: center
+		&__img
+			margin-bottom: 17px
+		&__name
+			color: $text-color-dark
+			font-family: "Roboto Bold"
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 5px
+		&__subname
+			color: $feedback-text-color
+			font-family: "Proxima Nova Light"
+			font-size: 16px
+			font-weight: 300
+			line-height: 22px
+			margin-bottom: 15px
+		&__descr
+			color: $text-color
+			font-family: "Proxima Nova Light"
+			font-size: 16px
+			text-align: justify
+   text-align-last: center
+			font-weight: 300
+			line-height: 22.14px
+			margin-bottom: 35px
+			p:first-child
+				margin-bottom: 25px
+
+/* /////////////////////////// two slider ////////////////////////////////// */
+.feedback
+	padding-top: 80px
+	padding-bottom: 80px
+	&-two
+		text-align: center
+		&__img
+			margin-bottom: 17px
+		&__name
+			color: $text-color-dark
+			font-family: "Roboto Bold"
+			font-size: 18px
+			font-weight: 700
+			margin-bottom: 5px
+		&__subname
+			color: $feedback-text-color
+			font-family: "Proxima Nova Light"
+			font-size: 16px
+			font-weight: 300
+			line-height: 22px
+			margin-bottom: 15px
+		&__descr
+			color: $text-color
+			font-family: "Proxima Nova Light"
+			font-size: 16px
+			font-weight: 300
+			text-align: justify
+   text-align-last: center
+			line-height: 22.14px
+			margin-bottom: 35px
+			p:first-child
+				margin-bottom: 25px
+
+
+.overlay
+	&-feed
+		position: fixed
+		display: none
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 1000
+		background: linear-gradient(to right, rgba(25, 127, 189, 0.8), rgba(114, 91, 165, 0.8))
+.feed
+	opacity: 1
+	display: none
+	position: fixed 
+	z-index: 1100 
+	left: 50%
+	top: 50%
+	margin-top: -157px
+	width: 360px
+	transform: translateX(-50%)
+	&-close
+		position: fixed
+		z-index: 20
+		right: 2%
+		top: -5px
+		font-size: 35px
+		color: $text-border
+		font-weight: 300
+		cursor: pointer
+	&-form
+		position: relative
+		text-align: center
+		z-index: 1
+		&_button
+				margin-top: 10px
+				padding: 18px 33px
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 100%
+					bottom: -176px
+					right: 157px
+					z-index: -1
+					transform: rotate(90deg)
+					padding-top: 45px
+					padding-left: 28px
+					padding-right: 28px
+					border-left: 1px solid $text-border
+					cursor: default
+					pointer-events: none
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					width: 100%
+					bottom: 183px
+					left: 158px
+					z-index: -1
+					transform: rotate(90deg)
+					padding-top: 45px
+					padding-left: 28px
+					padding-right: 28px
+					border-right: 1px solid $text-border
+					cursor: default
+					pointer-events: none
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			top: -35px;
+			z-index: -1
+			padding-top: 328.5px
+			padding-left: 28px
+			padding-right: 28px
+			border-right: 1px solid $text-border
+			border-left: 1px solid $text-border
+			border-top: 1px solid $text-border
+		&__block
+			margin-right: 30px
+			margin-left: 30px
+			margin-top: 35px
+		&__title
+			color: $text-color-light
+			font-family: "Proxima Nova Bold"
+			font-size: 22px
+			font-weight: 700
+			line-height: 24px
+			margin-bottom: 20px
+			text-transform: uppercase
+
+.input
+	&-text
+		height: 127px
+		width: 300px
+		padding: 10px 10px
+		border-radius: 20px
+		font-family: 'Proxima Nova Light'
+		font-size: 14px
+		color: $text-color-input
+		background-color: $text-color-light
+		border: 1px solid transparent
+		font-weight: 300
+		line-height: 24px
+		margin-bottom: 15px
