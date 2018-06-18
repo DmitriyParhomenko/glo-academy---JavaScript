@@ -1,0 +1,1098 @@
+@media (max-width: 576px)
+	.hidden-mobile
+		display: none
+	.hidden-mobile__title
+		display: none
+	.hidden-mobile_prod
+		display: none
+	.section
+		&-title
+			display: none
+	.section
+		&-title
+			&__mobile
+				display: block
+				font-size: 22px
+				font-weight: 700
+				line-height: 24px
+				text-transform: uppercase
+				text-align: center
+				margin-bottom: 19px
+				&::after
+					content: ''
+					display: none
+	.button
+		font-size: 14px
+		&-o 
+			font-size: 14px
+	/* .no-gutters 
+	  margin-right: 0 */
+	.bounceInUp
+		animation: none !important
+	.bounceInLeft
+		animation: none !important
+	.bounceInRight
+		animation: none !important
+
+	.top-nav
+		z-index: 998
+		transition: all 0.8s
+		left: -100vw
+		&_active
+			left: 0
+		.container
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100vw
+			height: 100vh
+		&_menu
+			flex-direction: column
+			align-items: center
+			li 
+				padding: 5px 15px 10px 15px
+				margin-top: 0
+				margin-bottom: 0
+				border-right: none
+				
+
+		
+	.header 
+		padding-top: 10px
+		padding-bottom: 11px
+		&-mobile
+			display: block
+			height: 34px
+			width: 34px
+			position: fixed
+			background-color: #fff
+			border-radius: 14%
+			box-shadow: 1px 1px 10px rgba(0,0,0,.4)
+			z-index: 999
+			top: 14px
+			left: 13px
+			span
+				display: block
+				height: 2px
+				width: 22px
+				position: absolute
+				background-color: #333
+				left: 50%
+				margin-left: -11px
+				top: 50%
+				margin-top: -1px
+				&::before
+					transition: all 0.2s
+					content: ''
+					display: block
+					height: 2px
+					width: 22px
+					position: absolute
+					background-color: #333
+					left: 50%
+					margin-left: -11px
+					top: 50%
+					margin-top: -6px
+				&::after
+					transition: all 0.2s
+					content: ''
+					display: block
+					height: 2px
+					width: 22px
+					position: absolute
+					background-color: #333
+					left: 50%
+					margin-left: -11px
+					top: 50%
+					margin-top: 4px
+			&_active
+				span
+					background-color: transparent
+					&::before
+						transform: rotate(135deg)
+						margin-top: 0
+					&::after
+						transform: rotate(-135deg)
+						margin-top: 0
+
+		&-logo
+			background: $active-color url(../img/logo/header-logo_mobile.png) center no-repeat
+			width: 35px
+			height: 35px
+			border-radius: 4px
+			margin-left: 45px
+		&-contacts
+			&__phone
+				&s 
+					flex-direction: column
+				font-size: 14px
+				margin-right: 0
+			&__button
+				display: inline-block
+				padding: 9px
+		.line
+			border-right: none
+		
+	/* /////////// One slider //////////////*/
+	.main
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 58px
+		&-text
+			&__title
+				font-size: 22px
+				color: $active-color
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 40px
+			&__form
+				background-color: transparent
+				padding: 10px
+				width: auto
+
+	/* /////////// Two slider //////////////*/
+	.main-slider
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 58px
+		&-text
+			&__title
+				font-size: 22px
+				color: $active-color
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 40px
+			&__form
+				background-color: transparent
+				padding: 10px
+				width: auto
+	.form
+		display: block
+		width: auto
+		&-title
+			padding-right: 0
+			font-size: 15px
+			line-height: 18px
+			&__descr
+				margin-bottom: 15px
+			&__important 
+				margin-top: 15px
+		&__input
+			display: block
+			margin: 0 auto
+			margin-bottom: 13px
+			font-size: 14px
+		&-small
+			padding-left: 0
+			font-size: 13px
+
+	.numbers
+		&-block
+			margin-bottom: 24px
+	.features
+		padding-top: 24px
+		padding-bottom: 60px
+		&-block
+			display: block
+			width: 100%
+			padding: 0 11px 23px 0
+			margin-left: 0
+			margin-bottom: 0
+			&__img
+				width: auto
+			&__text
+				width: 60%
+			&__title
+				font-size: 14px
+			&__descr
+					font-size: 14px
+					width: 115%
+
+	.products
+		padding-top: 0
+		padding-bottom: 20px
+		&-blocks
+			flex-flow: column wrap
+			align-items: center
+		&-block
+			margin-bottom: 35px
+			text-align: center
+			flex-basis: 50%
+			&__img
+				width: 100% 
+				height: 70%
+				margin-bottom: 19px
+
+
+
+		&-block
+			&__title
+				font-size: 18px
+	
+	.offer
+		&-title
+			font-size: 20px
+			margin-bottom: 14px
+			&_small
+				font-size: 16px
+		&-form
+			&__label
+				font-size: 14px
+			&__button
+				margin-bottom: 16px
+
+	.production
+		padding-top: 28px
+		padding-bottom: 25px
+		&-slider_bottom
+			height: 380px
+			overflow: hidden
+			width: 100%
+			padding-left: 0
+			padding-right: 0
+			img
+				height: 380px
+				margin: 0 auto
+		&-text
+			justify-content: between
+			text-align: center
+			width: 100%
+			&__title
+				padding: 19px 81px
+				margin-left: 0
+				margin-top: 19px
+				right: 0
+				width: 100%
+				font-size: 20px
+				&_mobile
+					display: block
+					width: 100%
+					z-index: -1
+					margin-bottom: 28px
+					text-transform: uppercase
+					text-align: center
+					padding-top: 15px
+					padding-bottom: 15px
+					background-color: #ff9d00
+					font-size: 20px
+					font-weight: 400
+					line-height: 22px
+					color: $text-color-light
+			&__descr
+				text-align: center
+				font-size: 14px
+				margin-bottom: 22px
+
+	.feedback
+		padding-top: 0
+		padding-bottom: 66px
+		background-color: $bg-color-light
+		&-slider
+			height: 355px
+			overflow: hidden
+			width: 290px
+			padding-left: 0
+			padding-right: 0
+			img
+				height: 355px
+				margin: 0 auto
+
+	.slider-arrow 
+		position: absolute
+  top: 50%
+  margin-top: -39.5px
+  z-index: 99
+  height: 79px
+		&_prod
+			border: 1px solid $active-color
+		&:hover
+			cursor: pointer
+		&_right_prod
+			right: 6px
+			background: $active-color url(../img/arrow-right_active.png) center no-repeat
+		&_left_prod
+			left: 6px
+			background: $active-color url(../img/arrow-left_active.png) center no-repeat
+
+	.slider-arr 
+		position: absolute
+		top: 50%
+		margin-top: -39.5px
+		z-index: 99
+		height: 79px
+		width: 22px
+		&_feedback
+			border: 1px solid $active-color
+		&:hover
+			cursor: pointer
+		&_right_feed
+			right: 4px
+			background: $active-color url(../img/arrow-right_active.png) center no-repeat
+			&:hover
+				opacity: 1
+				background: $active-color url(../img/arrow-right_active.png) center no-repeat
+		&_left_feed
+			left: 4px
+			background: $active-color url(../img/arrow-left_active.png) center no-repeat
+			&:hover
+				opacity: 1
+				background: $active-color url(../img/arrow-left_active.png) center no-repeat
+
+	.our-clients
+		padding-top: 0
+		&-block
+			width: 100%
+			height: 87px
+			&__img
+				max-width: 100%
+				height: auto
+				filter: none
+
+	.overlay
+		.popup
+			left: 50%
+			top: 35px
+			width: 80%
+			&-close
+				right: -2px
+				top: -15px
+				font-size: 35px
+			&-title
+				width: 100%
+				min-height: 50px
+				margin: 0
+				line-height: 48px
+				font-size: 14px
+			&-form
+				padding: 20px 10px 20px 10px
+				&-header
+					padding: 0
+					font-size: 18px
+					line-height: 20px
+					text-align: center
+					span
+						font-size: 14px
+				&__label
+					font-size: 18px
+					line-height: 20px
+				&__input
+					width: 230px
+					height: 46px
+					font-size: 12px
+					margin-bottom: 10px
+				&__btn
+					height: 46px	
+					font-size: 12px
+				&__note 
+					font-size: 12px
+	.contacts
+		padding-top: 473px
+		text-align: center
+		&-block
+			position: absolute
+			padding-top: 0			
+			padding-bottom: 0
+			width: 100%
+			left: 0
+			top: 40px
+			&__title
+				margin-top: 19px
+			&__address
+				&::before
+					display: none
+			&__indent
+				padding-left: 0
+			&__phone
+				&::before
+					display: none
+			&__mail
+				&::before
+					display: none
+		.map
+			width: 90%
+			margin-left: 5%
+			margin-right: 5%
+			height: 420px
+	.footer
+		margin-top: 5%
+
+@media (min-width: 576px) and (max-width: 993px)
+	.hidden-mobile
+		display: none
+	.hidden-mobile__title
+		display: none
+	.hidden-mobile_prod
+		display: none
+	.section
+		&-title
+			font-size: 22px
+	/* .no-gutters 
+	  pading-right: 10px */
+
+	.section
+		&-title
+			&__mobile
+				display: none
+	.button
+		font-size: 14px
+		&-o 
+			font-size: 14px
+	.bounceInUp
+		animation: none !important
+	.bounceInLeft
+		animation: none !important
+	.bounceInRight
+		animation: none !important
+
+	.top-nav
+		z-index: 998
+		transition: all 0.8s
+		left: -100vw
+		&_active
+			left: 0
+		.container
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100vw
+			height: 100vh
+		&_menu
+			flex-direction: column
+			align-items: center
+			li 
+				padding: 5px 15px 10px 15px
+				margin-top: 9px
+				margin-bottom: 9px
+				border-right: none
+		
+	.header 
+		padding-top: 10px
+		padding-bottom: 11px
+		padding-left: 100px
+		.container
+			margin-left: 0
+		&-mobile
+			display: block
+			height: 34px
+			width: 34px
+			position: fixed
+			background-color: #fff
+			border-radius: 14%
+			box-shadow: 1px 1px 10px rgba(0,0,0,.4)
+			z-index: 999
+			top: 14px
+			left: 40px
+			span
+				display: block
+				height: 2px
+				width: 22px
+				position: absolute
+				background-color: #333
+				left: 50%
+				margin-left: -11px
+				top: 50%
+				margin-top: -1px
+				&::before
+					transition: all 0.2s
+					content: ''
+					display: block
+					height: 2px
+					width: 22px
+					position: absolute
+					background-color: #333
+					left: 50%
+					margin-left: -11px
+					top: 50%
+					margin-top: -6px
+				&::after
+					transition: all 0.2s
+					content: ''
+					display: block
+					height: 2px
+					width: 22px
+					position: absolute
+					background-color: #333
+					left: 50%
+					margin-left: -11px
+					top: 50%
+					margin-top: 4px
+			&_active
+				span
+					background-color: transparent
+					&::before
+						transform: rotate(135deg)
+						margin-top: 0
+					&::after
+						transform: rotate(-135deg)
+						margin-top: 0
+		&-logo
+			background: $active-color url(../img/logo/header-logo_mobile.png) center no-repeat
+			width: 35px
+			height: 35px
+			border-radius: 4px
+			margin-left: 0
+		&-contacts
+			&__phone
+				font-size: 14px
+				margin-right: 0
+			&__button
+				display: inline-block
+				padding: 9px
+		
+	/* /////////// One slider //////////////*/
+	.main
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 58px
+		&-text
+			&__title
+				font-size: 22px
+				color: $active-color
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 40px
+			&__form
+				background-color: transparent
+				padding: 10px
+				width: auto
+
+	/* /////////// Two slider //////////////*/
+	.main-slider
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 58px
+		&-text
+			&__title
+				font-size: 22px
+				color: $active-color
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 40px
+			&__form
+				background-color: transparent
+				padding: 10px
+				width: auto
+	.form
+		display: flex
+		width: auto
+		justify-content: center
+		&-title
+			padding-right: 0
+			font-size: 15px
+			line-height: 18px
+			&__descr
+				margin-bottom: 15px
+			&__important 
+				margin-top: 15px
+		&__input
+			display: block
+			margin-bottom: 13px
+			font-size: 12px
+		&-small
+			padding-left: 0
+			font-size: 13px
+	.button
+		&_big
+			height: 54px
+			font-size: 12px
+
+	.numbers
+		&-block
+			margin-bottom: 24px
+			&__title
+				font-size: 29px
+	.features
+		&-block
+			display: block
+			width: 100%
+			padding: 8px 19px
+			margin-left: 0
+			margin-bottom: 8px
+			&__title
+				margin-top: 15px
+				font-size: 18px
+
+	.products
+		padding-bottom: 20px
+		&-blocks
+			flex-flow: column wrap
+			align-items: center
+		&-block
+			&__title
+				font-size: 18px
+	
+	.offer
+		&-title
+			font-size: 20px
+			margin-bottom: 14px
+			&_small
+				font-size: 16px
+		&-form
+			&__label
+				font-size: 14px
+			&__button
+				margin-bottom: 16px
+
+	.production
+		padding-top: 28px
+		padding-bottom: 25px
+		&-slider_bottom
+			height: auto
+			padding-left: 0
+			padding-right: 0
+			img
+				width: 100vw
+		&-text
+			justify-content: between
+			text-align: center
+			width: 100%
+			&__title
+				padding: 19px 81px
+				margin-left: 0
+				margin-top: 0
+				right: 0
+				width: 100%
+				font-size: 20px
+				&_mobile
+					display: block
+					width: 100%
+					z-index: -1
+					text-align: center
+					text-transform: uppercase
+					margin-bottom: 28px
+					padding-bottom: 15px
+					padding-top: 15px
+					background-color: #ff9d00
+					font-size: 22px
+					font-weight: 400
+					line-height: 22px
+					color: $text-color-light
+			&__descr
+				text-align: center
+				font-size: 14px
+				margin-bottom: 22px
+	.slider-arrow 
+		position: absolute
+  top: 50%
+  margin-top: -39.5px
+  z-index: 99
+  height: 79px
+		&_prod
+			border: 1px solid $active-color
+		&:hover
+			cursor: pointer
+		&_right_prod
+			right: 6px
+			background: $active-color url(../img/arrow-right_active.png) center no-repeat
+		&_left_prod
+			left: 6px
+			background: $active-color url(../img/arrow-left_active.png) center no-repeat
+
+
+	.our-clients
+		&-block
+			width: 100%
+			height: 180px
+			&__img
+				max-width: 100%
+				height: auto
+				filter: none
+				&1
+					max-width: 100%
+					height: 98px
+				&2
+					max-width: 100%
+					height: 95px
+				&3
+					max-width: 100%
+					height: 88px
+				&4
+					max-width: 100%
+					height: 72px
+				&5
+					max-width: 100%
+					height: 118px
+				&6
+					max-width: 100%
+					height: 56px
+				&7
+					max-width: 100%
+					height: 69px
+				&8
+					max-width: 100%
+					height: 29px
+				&9
+					max-width: 100%
+					height: 91px
+				&10
+					max-width: 100%
+					height: 33px
+				&11
+					max-width: 100%
+					height: 104px
+				&12
+					max-width: 100%
+					height: 82px
+
+	.overlay
+		.popup
+			left: 50%
+			top: 60px
+			width: 80%
+			&-close
+				right: -2px
+				top: -15px
+				font-size: 35px
+			&-title
+				width: 100%
+				min-height: 71px
+				margin: 0
+				line-height: 71px
+				font-size: 18px
+			&-form
+				padding: 35px 10px 50px 10px
+				&-header
+					padding: 0
+					font-size: 18px
+					line-height: 20px
+					text-align: center
+					span
+						font-size: 14px
+				&__label
+					font-size: 18px
+					line-height: 20px
+				&__input
+					width: 265px
+					height: 46px
+					font-size: 12px
+					margin-bottom: 10px
+				&__btn
+					height: 46px	
+					font-size: 12px
+				&__note 
+					font-size: 12px
+	.contacts
+		&-block
+			padding-top: 23px
+			padding-bottom: 29px
+			padding-left: 24px
+			padding-right: 24px
+			background-color: rgba(254, 254, 254, 0.5)
+			&__mail
+				&::before
+					top: 84%
+			&__title
+				font-size: 15px
+				&_subtitle
+					font-size: 12px
+
+@media (min-width: 993px) and (max-width: 1201px)
+	.hidden-mobile
+		display: none
+	.section-title
+		font-size: 22px
+	.section
+		&-title
+			&__mobile
+				display: none
+	.button
+		font-size: 14px
+		&-o 
+			font-size: 14px
+	/* .no-gutters 
+	  margin-right: 0 */
+	.bounceInUp
+		animation: none !important
+	.bounceInLeft
+		animation: none !important
+	.bounceInRight
+		animation: none !important
+
+	.top-nav
+		z-index: 998
+		transition: all 0.8s
+		left: -100vw
+		&_active
+			left: 0
+		.container
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100vw
+			height: 100vh
+		&_menu
+			flex-direction: column
+			align-items: center
+			li 
+				padding: 5px 15px 10px 15px
+				margin-top: 9px
+				margin-bottom: 9px
+				border-right: none
+		
+	.header 
+		padding-top: 10px
+		padding-bottom: 11px
+		padding-left: 100px
+		.container
+			margin-left: 0
+		&-mobile
+			display: block
+			height: 34px
+			width: 34px
+			position: fixed
+			background-color: #fff
+			border-radius: 14%
+			box-shadow: 1px 1px 10px rgba(0,0,0,.4)
+			z-index: 999
+			top: 14px
+			left: 40px
+			span
+				display: block
+				height: 2px
+				width: 22px
+				position: absolute
+				background-color: #333
+				left: 50%
+				margin-left: -11px
+				top: 50%
+				margin-top: -1px
+				&::before
+					transition: all 0.2s
+					content: ''
+					display: block
+					height: 2px
+					width: 22px
+					position: absolute
+					background-color: #333
+					left: 50%
+					margin-left: -11px
+					top: 50%
+					margin-top: -6px
+				&::after
+					transition: all 0.2s
+					content: ''
+					display: block
+					height: 2px
+					width: 22px
+					position: absolute
+					background-color: #333
+					left: 50%
+					margin-left: -11px
+					top: 50%
+					margin-top: 4px
+			&_active
+				span
+					background-color: transparent
+					&::before
+						transform: rotate(135deg)
+						margin-top: 0
+					&::after
+						transform: rotate(-135deg)
+						margin-top: 0
+		&-logo
+			// background: $active-color url(../img/logo/header-logo_mobile.png) center no-repeat
+			width: 150px
+			height: 50px
+			border-radius: 4px
+			margin-left: 0
+		
+		
+	/* /////////// One slider //////////////*/
+	.main
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 58px
+		&-text
+			&__title
+				font-size: 22px
+				color: $active-color
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 40px
+			&__form
+				width: auto
+				background-color: transparent
+				padding: 10px
+
+	/* /////////// Two slider //////////////*/
+	.main-slider
+		text-align: center
+		padding-top: 50px
+		padding-bottom: 58px
+		&-text
+			&__title
+				font-size: 22px
+				color: $active-color
+			&__subtitle
+				font-size: 18px
+				margin-bottom: 40px
+			&__form
+				background-color: transparent
+				padding: 10px
+				width: auto
+	.form
+		display: flex
+		width: auto
+		justify-content: center
+		&-title
+			padding-right: 0
+			font-size: 15px
+			line-height: 18px
+			&__descr
+				margin-bottom: 15px
+			&__important 
+				margin-top: 15px
+		&__input
+			display: block
+			margin-bottom: 13px
+			font-size: 14px
+		&-small
+			padding-left: 0
+			font-size: 13px
+	.button
+		&_big
+			height: 56px
+
+	.numbers
+		&-block
+			margin-bottom: 24px
+	.features
+		&-block
+			// display: block
+			width: 40%
+			height: 151px
+			padding: 8px 19px
+			margin-left: 0
+			margin-bottom: 8px
+			&__text
+				display: inline-block
+				width: 55%
+			&__title
+				margin-top: 15px
+
+	.products
+		padding-bottom: 20px
+		&-blocks
+			flex-flow: column wrap
+			align-items: center
+		&-block
+			&__title
+				font-size: 18px
+	
+	.offer
+		&-title
+			font-size: 20px
+			margin-bottom: 14px
+			&_small
+				font-size: 16px
+		&-form
+			&__label
+				font-size: 14px
+			&__button
+				margin-bottom: 16px
+
+	.production
+		padding-top: 28px
+		padding-bottom: 25px
+		&-slider_bottom
+			height: auto
+		&-text
+			justify-content: between
+			text-align: center
+			width: 100%
+			&__title
+				padding: 19px 81px
+				margin-left: 0
+				margin-top: 0
+				right: 0
+				width: 100%
+				font-size: 20px
+			&__descr
+				font-size: 14px
+				margin-bottom: 22px
+
+
+	.our-clients
+		text-align: center
+
+		&-block
+			width: 100%
+			height: 150px
+			&__img
+				max-width: 100%
+				height: auto
+				// filter: none
+				&1
+					max-width: 100%
+					height: 98px
+				&2
+					max-width: 100%
+					height: 95px
+				&3
+					max-width: 100%
+					height: 88px
+				&4
+					max-width: 100%
+					height: 72px
+				&5
+					max-width: 100%
+					height: 118px
+				&6
+					max-width: 100%
+					height: 56px
+				&7
+					max-width: 100%
+					height: 69px
+				&8
+					max-width: 100%
+					height: 29px
+				&9
+					max-width: 100%
+					height: 91px
+				&10
+					max-width: 100%
+					height: 33px
+				&11
+					max-width: 100%
+					height: 104px
+				&12
+					max-width: 100%
+					height: 82px
+
+	.overlay
+		.popup
+			left: 50%
+			top: 60px
+			width: 80%
+			&-close
+				right: -2px
+				top: -15px
+				font-size: 35px
+			&-title
+				width: 100%
+				min-height: 71px
+				margin: 0
+				line-height: 71px
+				font-size: 18px
+			&-form
+				padding: 35px 10px 50px 10px
+				&-header
+					padding: 0
+					font-size: 18px
+					line-height: 20px
+					text-align: center
+					span
+						font-size: 14px
+				&__label
+					font-size: 18px
+					line-height: 20px
+				&__input
+					width: 265px
+					height: 46px
+					font-size: 12px
+					margin-bottom: 10px
+				&__btn
+					height: 46px	
+					font-size: 12px
+				&__note 
+					font-size: 12px				

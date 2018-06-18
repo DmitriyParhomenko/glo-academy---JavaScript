@@ -1,0 +1,35 @@
+.feedback
+	padding-top: 55px
+	padding-bottom: 66px
+	background-color: $bg-color-light
+	&-slider
+		width: 80%
+		margin: 0 auto
+		&__items
+			&:focus
+				outline: none
+		img
+			margin: 0 auto
+			outline: none
+.slider-arr
+	position: absolute
+	top: 0
+	z-index: 99
+	height: 100%
+	width: 22px
+	&_prod
+		border: 1px solid $active-color
+	&:hover
+		cursor: pointer
+	&_right_feed
+		right: -25px
+		background: url(../img/arrow-feed_right.png) center no-repeat
+		&:hover
+			opacity: 0.5
+			background: url(../img/arrow-feed_right.png) center no-repeat
+	&_left_feed
+		left: -25px
+		background: url(../img/arrow-feed_left.png) center no-repeat
+		&:hover
+			opacity: 0.5
+			background: url(../img/arrow-feed_left.png) center no-repeat

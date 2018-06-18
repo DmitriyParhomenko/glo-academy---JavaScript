@@ -1,0 +1,57 @@
+.slick-current
+	&::after
+		display: none !important
+
+.production
+	padding:
+		top: 87px
+		bottom: 90px
+	&-slider
+		&_top
+			margin-bottom: 13px
+			height: 377px
+			overflow-y: hidden
+		&_bottom
+			padding-left: 30px
+			padding-right: 30px
+			height: 78px
+			overflow-y: hidden
+			&_blackout
+				margin: 0 6px
+				position: relative
+				img
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%
+					background-color: rgba(#000, 0.5)				
+	&-text
+		position: relative
+		width: 80%
+		&__title
+			position: relative
+			width: 115%
+			z-index: -1
+			right: 60px
+			margin-bottom: 28px
+			margin-top: 19px
+			background-color: #ff9d00
+			padding: 20px 185px 16px 58px
+			font-size: 28px
+			font-weight: 400
+			line-height: 22px
+			color: $text-color-light
+			&_mobile
+				display: none
+		&__descr
+			text-align: justify
+			font-size: 16px
+			font-weight: 300
+			line-height: 24px
+			color: $text-color-dark
+			p 
+				margin-bottom: 11px

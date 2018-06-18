@@ -1,0 +1,83 @@
+.section
+	&-title
+		display: block
+		font-size: 27px
+		font-weight: 700
+		line-height: 18px
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 39px
+		&::after
+			content: ''
+			margin-top: 12px
+			display: block
+			height: 6px
+			background: url(../img/line.png) center no-repeat
+.section
+		&-title
+			&__mobile
+				display: none
+.button
+	font-size: 17px
+	background-color: $active-color
+	border: 1px solid transparent
+	color: $text-color-light
+	padding: 13px 22px
+	border-radius: 5px
+	&:hover
+		background-color: lighten($active-color,8%)
+		cursor: pointer
+		transition: 0.4s
+	&-o 
+		background-color: transparent
+		color: $text-color-dark
+		border: 1px solid rgba($text-color-dark, 0.5)
+		&:hover
+			background-color: lighten($active-color,8%)
+			color: $text-color-light
+			border: 1px solid transparent
+			cursor: pointer
+			transition: 0.4s
+
+	img 
+		vertical-align: middle
+	&_big
+		padding-top: 20px
+		padding-bottom: 20px
+		vertical-align: middle
+
+.slider-arrow 
+	position: absolute
+	top: 0
+	z-index: 99
+	height: 100%
+	width: 22px
+	&_prod
+		border: 1px solid $active-color
+	&:hover
+		cursor: pointer
+	&_right_prod
+		right: 0
+		background: #fff url(../img/arrow-right.png) center no-repeat
+		&:hover
+			background: $active-color url(../img/arrow-right_active.png) center no-repeat
+	&_left_prod
+		left: 0
+		background: #fff url(../img/arrow-left.png) center no-repeat
+		&:hover
+			background: $active-color url(../img/arrow-left_active.png) center no-repeat
+
+.dark-bg
+	position: relative
+	z-index: 2
+	/* Затемнение главного фона */
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.5)
+		z-index: -1
