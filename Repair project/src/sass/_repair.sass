@@ -1,0 +1,101 @@
+.center
+	text-align: center
+.title
+	padding-top: 68px
+	padding-bottom: 30px
+	background-color: $h1-color-section
+	padding-left: 27px
+.bread
+	color: $bread-color
+	font-family: 'ArialBold'
+	font-size: 13px
+	font-weight: 400
+	line-height: 38px
+	padding-left: 27px
+	box-shadow: 0 2px 5px rgba(0, 1, 1, 0.24)
+.repair
+	padding-top: 40px
+	padding-bottom: 52px
+	display: flex
+	&-all
+		margin-top: 26px
+		a
+			color: $repair-btn
+			font-family: 'ArialBold'
+			font-size: 16px
+			font-weight: 400
+			text-decoration: underline
+			text-transform: uppercase
+	&-btn
+		min-height: 115px
+		position: relative
+		a
+			position: absolute
+			left: 50%
+			margin-left: -114px
+			top: 50%
+			margin-top: -26.5px
+			color: $repair-btn
+			font-family: 'ArialBold'
+			font-size: 15px
+			font-weight: 400
+			text-transform: uppercase
+			text-decoration: none
+			padding: 15px 75px
+			border: 3px solid $repair-btn-active
+			border-radius: 50px
+			&:hover
+				background-color: $repair-btn-active
+	&-option
+		display: flex
+  flex-direction: column
+	&-wrap
+		position: relative
+		width: 275px
+		height: 207px
+		overflow: hidden
+		&::before
+			content: ''
+			display: block
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			background: rgba($nav-color-dark, 0.5)
+		img 
+			display: block
+			height: 210px
+			width: 280px
+			overflow: hidden
+			left: 50%
+			line-height: 280px
+			text-align: center
+			top: 50%
+			vertical-align: middle
+	&-list
+		width: 275px
+		margin-bottom: 16px
+		box-shadow: 0 15px 43px -9px rgba(0,1,1,0.24)
+		img
+		&__title
+			position: absolute
+			top: 50%
+			margin-top: -38px
+			color: $repair-color
+			font-family: 'ArialBold'
+			font-size: 26px
+			font-weight: 400
+			text-transform: uppercase
+			text-align: center
+			&::after
+				content: ''
+				position: absolute
+				bottom: -17px
+				left: 50%
+				margin-left: -20px
+				width: 38px
+				height: 5px
+				background-color: #bbf818
+			
+

@@ -1,0 +1,52 @@
+.btnentry
+	background: rgba($slider-line, 0.5)
+	padding-top: 40px
+	padding-bottom: 40px
+	position: relative
+	&::before
+		content: ''
+		display: block
+		background: url(../img/btnentry/bg-entry.jpg) center no-repeat
+		background-size: cover
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		position: absolute
+	&-wrap
+		display: flex
+		align-items: center
+		z-index: 999
+	&-title
+		max-width: 296px
+		margin-right: 69px
+		text-shadow: 0 2px 0 $text-shadow
+		color: $entry-wrap
+		font-family: 'ArialBold'
+		font-size: 31px
+		font-weight: 400
+		text-transform: uppercase
+	&-subtitle
+		max-width: 402px
+		margin-right: 98px
+		text-shadow: 0 2px 0 $text-shadow
+		color: $entry-wrap
+		font-family: 'ArialBoldItalic'
+		font-size: 20px
+		font-weight: 400
+	&-btn
+		a
+			color: $repair-btn
+			font-family: 'ArialBold'
+			font-size: 17px
+			font-weight: 400
+			text-transform: uppercase
+			text-decoration: none
+			background-color: $entry-btn
+			border: 1px solid $entry-btn
+			border-radius: 5px
+			cursor: pointer
+			padding: 21px 24px
+			&:hover
+				background-color: $entry-btn-active
+				border: 1px solid $entry-btn-active

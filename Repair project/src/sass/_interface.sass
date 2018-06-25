@@ -1,0 +1,51 @@
+h1
+	color: $h1-color
+	font-family: 'ArialBold'
+	font-size: 31px
+	font-weight: 400
+	line-height: 38px
+h2
+	color: $h1-color
+	font-family: 'ArialBold'
+	font-size: 31px
+	font-weight: 400
+	line-height: 38px
+	width: auto
+	white-space: nowrap
+.main-title
+	display: flex
+	&__line
+		width: 100%
+		height: 31px
+		margin-left: 23px
+		margin-bottom: 47px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+		 top: 50%
+			margin-top: 3px
+			height: 5px
+			width: 100%
+			background-color: $line-title
+
+.hidden
+	display: none
+.header-btn 
+	color: $text-color
+	font-family: 'ArialBold'
+	font-size: 14px
+	font-weight: 400
+	text-transform: uppercase
+	background-color: transparent
+	padding: 12px 19px
+	height: 100%
+	border-radius: 18px
+	border: 1px solid $text-color
+	margin-left: 25px
+	margin-right: 35px
+	text-decoration: none
+	cursor: pointer
+	&:hover
+		color: $border-color
+		border: 1px solid $border-color

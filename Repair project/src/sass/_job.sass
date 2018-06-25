@@ -1,0 +1,93 @@
+
+.slide
+	position: absolute
+.slider-wrap
+	display: flex
+	justify-content: center
+.job
+	padding-top: 70px
+	padding-bottom: 97px
+	&-slider
+		display: flex
+		width: 94%
+		box-shadow: 0 15px 50px rgba(0, 1, 1, 0.24)
+		&__img
+			width: 472px
+			height: 409px
+			overflow: hidden
+			position: relative
+			img
+					display: block
+					min-height: 462px
+					min-width: 580px
+					left: 50%
+					line-height: 365px
+				 margin-left: -277px
+				 margin-top: -254px
+					position: absolute
+					text-align: center
+					top: 50%
+					vertical-align: middle
+	 &__wrap
+	 	padding-top: 37px
+	 	padding-right: 34px
+	 	padding-left: 34px
+	 	padding-bottom: 27px
+	 	width: 56%
+	 	&_title
+	 		color: $h2-color
+	 		font-family: 'ArialBold'
+	 		font-size: 23px
+	 		font-weight: 400
+	 		margin-bottom: 21px
+	 	&_line
+	 		width: 504px
+				height: 3px
+				background-color: $slider-line
+				margin-bottom: 24px
+			&_descr
+				color: $slider-descr
+				font-family: 'Arial'
+				font-size: 15px
+				font-weight: 400
+				line-height: 24px
+				text-align: justify
+				margin-bottom: 52px
+				min-height: 145px
+			&-price
+				display: flex
+				&_title
+					display: flex
+					flex-direction: column
+					margin-right: 60px
+					span
+						&:first-child
+							color: $h2-color
+	 					font-family: 'ArialBold'
+							font-size: 19px
+							font-weight: 400
+							margin-bottom: 4px
+						&:last-child
+							color: $h2-color
+							font-family: 'Arial'
+							font-size: 18px
+							font-weight: 400
+				&_link
+					span
+						color: $h2-color
+						font-family: 'Arial'
+						font-size: 15px
+						font-weight: 400
+						line-height: 24px
+						text-transform: uppercase
+						padding-right: 11px
+						border-right: 2px solid $slider-line
+					a
+						color: $slider-link
+						font-family: 'ArialBold'
+						font-size: 14px
+						font-weight: 400
+						line-height: 24px
+						text-decoration: underline
+						text-transform: uppercase
+						padding-left: 10px

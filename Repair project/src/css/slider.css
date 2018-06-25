@@ -1,0 +1,104 @@
+#slider-wrap{ /* Оболочка слайдера и кнопок */
+	width: 100%; 
+	}
+
+#slider{ /* Оболочка слайдера */
+	width: 100%;
+	min-height: 377px;
+	/* overflow:  hidden; */
+	position: relative;
+}
+
+.slide{ /* Слайд */
+	width: 100%;
+	height: 100%;
+	}
+
+.sli-links{ /* Кнопки смены слайдов */
+	margin-top: 10px;
+	text-align: center;
+}
+
+.sli-links .control-slide{
+	margin: 2px;
+	display: none;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -9999px;
+	/* background: url(radioBg.png) center bottom no-repeat; */
+}
+
+.sli-links .control-slide: hover{
+	cursor: pointer;
+	background-position: center center;
+}
+
+.sli-links .control-slide.active{
+	background-position: center top;
+}
+/* Ссылка "Следующий" и "Педыдущий" */
+#prewbutton, #nextbutton{ 
+	display: block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	text-indent: -999px;
+	/*background: url(../img/slider-arrow.svg) left center no-repeat;*/
+	opacity: 0.8;
+	z-index: 3;
+	outline: none !important;
+}
+
+#prewbutton{
+	left: 4px;
+	transform: rotate(180deg);
+	width: 60px;
+ height: 60px;
+ position: absolute;
+ background-color: #dbf4d7;
+ margin-top: -30px;
+ border-radius: 50%;
+ top: 50%;
+}
+#prewbutton::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 50%;
+	margin-right: -10.5px;
+	top: 50%;
+	margin-top: -15.5px;
+	width: 17px;
+	height: 31px;
+	background: url(../img/slider-arrow.svg) left center no-repeat;
+}
+
+#nextbutton{
+	right: 4px;
+	width: 60px;
+ height: 60px;
+ position: absolute;
+ background-color: #dbf4d7;
+ margin-top: -30px;
+ border-radius: 50%;
+ top: 50%;
+}
+#nextbutton::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 50%;
+	margin-right: -10.5px;
+	top: 50%;
+	margin-top: -15.5px;
+	width: 17px;
+	height: 31px;
+	background: url(../img/slider-arrow.svg) right center no-repeat;
+}
+
+#prewbutton:hover, #nextbutton:hover{
+	background-color: #c1f0b9
+}
