@@ -1,0 +1,108 @@
+.nav-bottom
+	position: absolute
+	left: 50%
+	margin-left: -570px
+	top: 182px
+	&__container
+		width: 1140px
+.header-bottom
+	background-color: $bottom-nav-color
+	box-shadow: 0 1px 2px rgba(0, 1, 1, 0.24)
+	ul
+		list-style: none
+		padding: 0
+		display: flex
+		li
+			padding-top: 26px
+			padding-bottom: 26px
+			padding-left: 30px
+			padding-right: 21px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+    top: 50%
+   	margin-top: -6px
+    left: 101%
+    height: 12px
+    border-right: 2px solid $bottom-nav-active
+   &:last-child:after
+   	content: ''
+				position: absolute
+   	border-right: none
+   	left: 185px
+   	width: 11px
+   	background: url(../img/header/arrow-nav.svg) center no-repeat
+   &:last-child:hover:after
+   	background: url(../img/header/arrow-active.svg) center no-repeat
+			&:hover:after
+				border-right: none
+			&:hover:before
+				content: ''
+				position: absolute
+    top: 50%
+   	margin-top: -3.5px
+    left: 16px
+    width: 7px
+				height: 7px
+				background-color: $border-color
+			&:last-child:hover
+				padding-right: 58.5px
+				ul
+					display: flex
+			&:hover
+				background-color: $bottom-nav-active
+				border-right: none
+			a
+				text-shadow: 0 1px 2px rgba(0, 1, 1, 0.24)
+				color: $text-color
+				font-family: 'ArialBold'
+				font-size: 16px
+				font-weight: 400
+				text-decoration: none
+				text-transform: uppercase
+			ul
+				display: none
+				z-index: 5
+				li
+					&:hover:before
+		    left: 65px
+					&:last-child:after
+						background: none
+					&::after
+						border: none
+					&:last-child:hover
+						padding-right: 21px
+			
+
+.submenu
+ position: absolute
+ flex-direction: column
+ width: 232px
+ top: 70px
+ left: 0
+ background-color: $bottom-nav-active
+ padding-left: 18px
+	padding-right: 18px
+	li
+		padding-left: 9px !important
+		padding-top: 10px !important
+		padding-bottom: 10px !important
+		border-top: 1px solid #7f7f7f
+		margin-left: 18px
+		max-width: 200px
+		&:hover:before
+			display: none
+		&:last-child:hover:after
+			display: none !important
+	a
+		color: $text-color !important
+		font-family: 'Arial' !important
+		font-size: 15px !important
+		line-height: 0 !important
+		text-transform: none !important
+		&:hover
+			color: $submenu-active !important
+
+
+		
